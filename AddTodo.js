@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 
 class AddTodo extends Component{
     state={
+        todos:[],
+        filter:"all",
         content:''
 
     }
@@ -20,6 +22,7 @@ class AddTodo extends Component{
     }
 
     render(){
+
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -27,6 +30,10 @@ class AddTodo extends Component{
                     <input type="text" onChange={this.handleChange} value={this.state.content}/>
                 </form>
             </div>
+
+            
+           
+            
         )
     }
 }
